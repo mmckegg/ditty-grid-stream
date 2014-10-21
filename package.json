@@ -1,0 +1,27 @@
+{
+  "name": "ditty-grid-stream",
+  "version": "1.0.0",
+  "description": "Stream observable array-grids as ditty note events.",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mmckegg/ditty-grid-stream.git"
+  },
+  "author": "Matt McKegg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mmckegg/ditty-grid-stream/issues"
+  },
+  "homepage": "https://github.com/mmckegg/ditty-grid-stream",
+  "dependencies": {
+    "through": "^2.3.6",
+    "observ-grid": "^2.7.0"
+  },
+  "devDependencies": {
+    "array-grid": "^1.4.0",
+    "tape": "^3.0.1"
+  }
+}
