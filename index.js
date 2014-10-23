@@ -5,7 +5,7 @@ module.exports = DittyGridStream
 
 function DittyGridStream(observableGrid, mapping, scheduler){
 
-  var offEvents = []
+  var offEvents = {}
   var stream = Through()
 
   var removeListener = watchGridChanges(observableGrid, function(changes, isRevert){
@@ -45,7 +45,18 @@ function DittyGridStream(observableGrid, mapping, scheduler){
     })
   })
 
-  stream.on('end', removeListener)
+  stream.destroy = function(){
+    if (removeListener){
+      Object.keys(offEvents).forEach(function(key){
+        if (offEvents[key]){
+          stream.queue(offEvents[key])
+        }
+      })
+      offEvents[key] = {}
+      removeListener()
+      removeListener = null
+    }
+  }
 
   return stream
 }
