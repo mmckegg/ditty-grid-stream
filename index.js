@@ -52,7 +52,7 @@ function DittyGridStream(observableGrid, mapping, scheduler){
           stream.queue(offEvents[key])
         }
       })
-      offEvents[key] = {}
+      offEvents = {}
       removeListener()
       removeListener = null
     }
