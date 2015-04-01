@@ -18,7 +18,7 @@
   "homepage": "https://github.com/mmckegg/ditty-grid-stream",
   "dependencies": {
     "through": "^2.3.6",
-    "observ-grid": "^2.7.0"
+    "observ-grid": "^2.9.0"
   },
   "devDependencies": {
     "array-grid": "^1.4.0",
